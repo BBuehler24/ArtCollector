@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import {
   // Feature,
   Loading,
-  // Preview,
+  Preview,
   Search,
   Title
 } from './components';
@@ -23,12 +23,12 @@ const App = () => {
       setSearchResults={setSearchResults}
     />
     {/* <Preview /> needs props for searchResults, setIsLoading and setSearchResults (clicking prev/next buttons), and setFeaturedResult (clicking a preview) */}
-    {/* <Preview 
+    <Preview 
       setIsLoading={setIsLoading}
       searchResults={searchResults}
       setSearchResults={setSearchResults}
       setFeaturedResult={setFeaturedResult}
-    /> */}
+    />
     {/* <Feature /> needs props for featuredResult, as well as setIsLoading and setSearchResults (clicking on searchable properties) */}
     {/* <Feature 
       setIsLoading={setIsLoading}
@@ -36,13 +36,15 @@ const App = () => {
       setSearchResults={setSearchResults}
     /> */}
     {/* <Loading /> is static, but should only render when isLoading is true */}
-    <Loading isLoading={isLoading} /> {/* use a ternary and render null if isLoading is false */}
+    {
+      isLoading ? <Loading /> : null
+    }
   </div>
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
 
 /**
- * Boostrap the <App /> component into the '#app' element in the DOM,
+ * Bootstrap the <App /> component into the '#app' element in the DOM,
  * using ReactDOM.render();
  */
