@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 // These imports won't work until you fix ./components/index.js
 import {
-  // Feature,
+  Feature,
   Loading,
   Preview,
   Search,
@@ -30,11 +30,11 @@ const App = () => {
       setFeaturedResult={setFeaturedResult}
     />
     {/* <Feature /> needs props for featuredResult, as well as setIsLoading and setSearchResults (clicking on searchable properties) */}
-    {/* <Feature 
+    <Feature 
       setIsLoading={setIsLoading}
       featuredResult={featuredResult}
       setSearchResults={setSearchResults}
-    /> */}
+    />
     {/* <Loading /> is static, but should only render when isLoading is true */}
     {
       isLoading ? <Loading /> : null

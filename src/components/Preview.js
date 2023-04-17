@@ -59,7 +59,7 @@ const Preview = (props) => {
       {
 
         records.map((record, idx) => {
-          console.log(records);
+          // console.log(records);
           return (
             <div
               key={ idx }
